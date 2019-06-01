@@ -45,6 +45,7 @@ public class UserServiceImpl implements UserService {
 
     @Audit
     @Counter
+    @Transactional
     public List<UserDTO> findAll() {
         String sql = "SELECT * FROM users";
         List<User> users = null;

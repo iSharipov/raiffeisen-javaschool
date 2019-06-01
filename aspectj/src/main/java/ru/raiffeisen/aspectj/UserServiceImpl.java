@@ -43,4 +43,8 @@ public class UserServiceImpl implements UserService {
         }
         return new UserDTO.Mapper().mapToDTOs(users);
     }
+
+    static {
+        System.out.println("Static initializer");
+    }
 }
