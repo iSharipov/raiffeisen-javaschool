@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
     private final Map<Long, User> storage;
 
     public UserServiceImpl(Map<Long, User> storage) {
+        System.out.println("From initialization");
         this.storage = storage;
     }
 
