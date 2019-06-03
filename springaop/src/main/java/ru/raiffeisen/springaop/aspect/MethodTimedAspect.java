@@ -15,8 +15,9 @@ public class MethodTimedAspect {
     @Around("execution(* ru.raiffeisen.springaop.service.UserService.*(..))")
     public Object timedMethod(ProceedingJoinPoint pjp) throws Throwable {
         logger.info("From MethodTimedAspect before method call");
+        long start = System.nanoTime();
         Object result = pjp.proceed();
-        logger.info("From MethodTimedAspect after method call");
+        logger.info("From MethodTimedAspect after method call: " + (System.nanoTime() - start) / 1000000);
         return result;
     }
 }

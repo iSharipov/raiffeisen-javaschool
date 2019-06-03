@@ -8,8 +8,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import ru.raiffeisen.springaop.config.WebConfig;
 
 @EnableTransactionManagement
-@EnableAspectJAutoProxy
-@PropertySource("classpath:application.properties")
+//@EnableAspectJAutoProxy
 @Configuration
 public class App extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override

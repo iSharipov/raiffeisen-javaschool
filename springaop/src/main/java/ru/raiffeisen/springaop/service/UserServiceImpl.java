@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public UserDTO byId(long id) {
         String sql = "SELECT * FROM users WHERE id = ?";
+        List<UserDTO> findAll = findAll();
         User user = null;
         try {
             user = jdbcTemplate.queryForObject(
@@ -43,8 +44,6 @@ public class UserServiceImpl implements UserService {
         return new UserDTO.Mapper().mapToDTO(user);
     }
 
-    @Audit
-    @Counter
     @Transactional
     public List<UserDTO> findAll() {
         String sql = "SELECT * FROM users";

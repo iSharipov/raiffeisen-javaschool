@@ -3,11 +3,17 @@ package ru.raiffeisen.aspectj;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class UserServiceAspect {
 
-//    @Before("execution(* ru.raiffeisen.aspectj.UserService.byId(..))")
+//    @Pointcut("execution(* ru.raiffeisen.aspectj.UserService.byId(..))")
+//    public void executeByIdInUserService(){
+//
+//    }
+//
+//    @Before("executeByIdInUserService()")
 //    public void doSomethingBefore() {
 //        System.out.println("Before");
 //    }
