@@ -1,5 +1,6 @@
 package ru.raiffeisen.aspectj;
 
+import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
@@ -29,8 +30,8 @@ public class Main {
 //        Enhancer enhancer = new Enhancer();
 //        enhancer.setSuperclass(UserService.class);
 //        enhancer.setSuperclass(UserServiceImpl.class);
-//        enhancer.setInterfaces(UserServiceImpl.class.getInterfaces());
 //        enhancer.setCallback(new UserServiceMethodInterceptor());
+//        UserService userService = (UserService)enhancer.create();
 //        UserService userService = (UserService) enhancer.create(UserServiceImpl.class.getConstructor(Map.class).getParameterTypes(), new Object[]{users});
 
         UserService userService = new UserServiceImpl(users);

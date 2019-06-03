@@ -1,9 +1,6 @@
 package ru.raiffeisen.aspectj;
 
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class UserServiceAspect {
@@ -43,7 +40,7 @@ public class UserServiceAspect {
 //        System.out.println("After throwing with Exception");
 //        System.out.println(ex.getMessage());
 //    }
-//
+
 //    @After("execution(* ru.raiffeisen.aspectj.UserService.byId(..))")
 //    public void doSomethingAfter() {
 //        System.out.println("After");
